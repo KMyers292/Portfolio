@@ -1,7 +1,7 @@
 .section__projects {
-    grid-row: 4 / 5;
     background-color: #000C11;
     overflow: hidden;
+    padding-bottom: 8rem;
 }
 
 .projects__grid {

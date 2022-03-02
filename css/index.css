@@ -1,14 +1,9 @@
 .main-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8rem 100vh 160vh 190vh 100vh 10rem;
     position: relative;
     overflow-x: hidden;
 }
 
 .main__nav {
-    grid-row: 1 / 2;
-
     background-color: #202020;
     border-bottom: 3px solid #02ABEC;
     box-shadow: 0 1.5rem 1.4rem -1.5rem rgba(2,171,236,0.5);
