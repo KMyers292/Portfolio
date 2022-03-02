@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+    <title>Kyle Myers - Portfolio</title>
+</head>
+<body>
+    <header class="header" id="head">
+        <div class="header__logo-box">
+            <img src="img/logo_transparent.png" alt="Website Main Logo For Background" class="header__logo">
+        </div>
+        <div class="header__bg-video-box">
+            <video autoplay muted id="header__bg-video" tabindex="-1">
+                <source src="img/header_bg_4k.mp4" type="video/mp4" preload="auto">
+                Video is not supported by this browser.
+            </video>
+        </div>
+        <div class="header__video-controls">
+            <ion-icon name="pause-circle-outline" class="header__video-controls-icon" id="pause-btn" tabindex="0" aria-label="Pause Button For Video Background"></ion-icon>
+        </div>
+        <div class="header__ribbon-box">
+            <a href="games.html" class="header__games-link" aria-label="Link To Games Section of Website">
+                <div class="header__ribbon">
+                    <ion-icon name="game-controller-outline" class="header__ribbon-icon"></ion-icon>
+                </div>
+            </a>
+        </div>
+        <div class="header__title-box">
+            <div class="header__title header__title--primary">
+                <span class="header__intro-block header__intro-block--primary"></span>
+                <h1 class="header__text header__text--primary">Kyle Myers</h1>
+            </div>
+            <div class="header__title header__title--secondary">
+                <div class="header__intro-block header__intro-block--secondary"></div>
+                <h3 class="header__text header__text--secondary">Web Developer</h3>
+            </div>
+            <div class="header__btn-box">
+                <span class="header__btn-block"></span>
+                <button class="header__btn">
+                    <span class="header__btn-border"></span>
+                    <span class="header__btn-text">Learn More</span>
+                    <ion-icon name="chevron-forward-outline" class="header__btn-icon"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="header__social-btn-box">
+            <a href="https://www.linkedin.com/in/kyle-myers-2aab0293" aria-label="Link to LinkedIn Page" target="_blank" rel='noreferrer' class="header__social-link"><ion-icon name="logo-linkedin" class="header__social-btn social-btn-icon header__social-btn--linkedin"></ion-icon></a>
+            <a href="https://github.com/KMyers292" aria-label="Link to GitHub Page" target="_blank" rel='noreferrer' class="header__social-link"><ion-icon name="logo-github" class="header__social-btn social-btn-icon header__social-btn--github"></ion-icon></a>
+            <a href="./Kyle_Myers_Resume.pdf" aria-label="Link to Resume PDF" target="_blank" rel='noreferrer' class="header__social-link"><ion-icon name="document-text" class="header__social-btn social-btn-icon header__social-btn--resume"></ion-icon></a>
+        </div>
+    </header>
+    <main class="main-grid" id="main-grid">
+        <nav class="main__nav" id="navigation">
+            <div class="nav__logo-box">
+                <a href="#head" class="nav__link-logo link"><img src="img/logo_transparent_smaller.png" class="nav__logo" alt="Website Main Logo"></a>
+                <div class="logo__border-bottom"></div>
+            </div>
+            <div class="nav__link-btn-box">
+                <a href="#about" class="nav__link-btn link" id="about-btn">About</a>
+                <a href="#skills" class="nav__link-btn link" id="skills-btn">Skills</a>
+                <a href="#projects" class="nav__link-btn link" id="projects-btn">Projects</a>
+                <a href="#contact" class="nav__link-btn link" id="contact-btn">Contact</a>
+            </div>
+            <div class="nav__game-btn-box">
+                <a href="games.html" class="nav__game-btn-link"><ion-icon name="game-controller-outline" class="nav__game-btn"></ion-icon></a>
+            </div>
+            <button class="btn-mobile-nav">
+                <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+                <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+            <div class="main__nav-mobile">
+                <div class="nav__link-btn-box--mobile">
+                    <a href="#about" class="nav__link-btn link" id="about-btn">About</a>
+                    <a href="#skills" class="nav__link-btn link" id="skills-btn">Skills</a>
+                    <a href="#projects" class="nav__link-btn link" id="projects-btn">Projects</a>
+                    <a href="#contact" class="nav__link-btn link" id="contact-btn">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <section class="section__about" id="about">
+            <div class="text-box--center" id="about__header">
+                <div class="section__heading--main">
+                    <span class="heading__letters">A</span><span class="heading__letters">b</span><span class="heading__letters">o</span><span class="heading__letters">u</span><span class="heading__letters">t</span>
+                </div>
+            </div>
+            <div class="about__grid" id="about__grid">
+                <aside class="about__photo-box">
+                    <img src="img/headshot.jpg" alt="Headshot of Website Creator" class="about__photo" id="about__photo">
+                    <div class="about__info-box">
+                        <a href="https://www.google.com/maps/place/Kitchener,+ON/@43.430413,-80.5463549,12z/" aria-label="Link to Google Maps of Kitchener Ontario" target="_blank" rel='noreferrer' class="about__info" id="about__info--address">Kitchener Ontario, Canada</a>
+                        <a href="tel:902-233-4466" class="about__info" id="about__info--phone" aria-label="Link to Call Website Creator">(902)-233-4466</a>
+                        <a href="mailto:kylemyers_292@live.ca" class="about__info" id="about__info--email" aria-label="Link to Email Website Creator">kylemyers_292@live.ca</a>
+                    </div>
+                    <div class="about__border" id="about__row-border"></div>
+                    <div class="about__social-btn-box">
+                        <a href="https://www.linkedin.com/in/kyle-myers-2aab0293" aria-label="Link to LinkedIn Page" target="_blank" rel='noreferrer' class="about__social-btn-link" id="about__social--linkedin"><ion-icon name="logo-linkedin" class="about__social-btn about__social-btn--linkedin"></ion-icon></a>
+                        <a href="https://github.com/KMyers292" aria-label="Link to GitHub Page" target="_blank" rel='noreferrer' class="about__social-btn-link" id="about__social--github"><ion-icon name="logo-github" class="about__social-btn about__social-btn--github"></ion-icon></a>
+                        <a href="./Kyle_Myers_Resume.pdf" aria-label="Link to Resume PDF" target="_blank" rel='noreferrer' class="about__social-btn-link" id="about__social--resume"><ion-icon name="document-text" class="about__social-btn about__social-btn--resume"></ion-icon></a>
+                    </div>
+                </aside>
+                <article class="about__main-text-box">
+                    <p class="about__main-text" id="about__main-text--1">
+                        I am a full stack web developer, leaning more towards front-end development, that is located in Kitchener Ontario, Canada. 
+                        I have a passion for web development, design, and making the web as interactive and appealing as possible.
+                    </p>
+                    <p class="about__main-text" id="about__main-text--2">
+                        The last decade of my life has found me in the construction trade in a variety of positions and locations. 
+                        This has provided me with unique experiences that demand a high attention to detail and allowed me to develop a more creative mindset to solving problems. 
+                        My range of positions has taught me an understanding of not only teamwork, but how to be effective independently, and how be a leader when needed.
+                    </p>
+                    <p class="about__main-text" id="about__main-text--3">
+                        Fast forward to today, I took the plunge into restarting my life after going back to school to learn computer science. 
+                        I now am back in the workforce and using my free time to hone my skills and create new and interesting webpages and learn new techniques.
+                    </p>
+                </article>
+            </div>
+            <div class="section__bottom-link-box" id="section__bottom-link--about">
+                <a href="#skills" class="section__bottom-link link"><ion-icon name="chevron-down-outline" class="section__bottom-icon"></ion-icon></a>
+            </div>
+        </section>
+        <section class="section__skills" id="skills">
+            <div class="text-box--center" id="skills__header">
+                <div class="section__heading--main">
+                    <span class="heading__letters">S</span><span class="heading__letters">k</span><span class="heading__letters">i</span><span class="heading__letters">l</span><span class="heading__letters">l</span><span class="heading__letters">s</span>
+                </div>
+            </div>
+            <aside class="skills__header-box">
+                <div class="skills__header">
+                    <div class="skills__icon-box" id="skills__icon--1">
+                        <div class="skills__icon-bg">
+                            <ion-icon name="phone-portrait-outline" class="skills__icons" alt=""></ion-icon>
+                        </div>
+                    </div>
+                    <div class="skills__header-text-box" id="skills__header-text--1">
+                        <p class="skills__header-text">In today's mobile first world, responsive design is a top priority.</p>
+                    </div>
+                </div>
+                <div class="skills__header">
+                    <div class="skills__icon-box" id="skills__icon--2">
+                        <div class="skills__icon-bg">
+                            <ion-icon name="speedometer-outline" class="skills__icons" alt=""></ion-icon>
+                        </div>
+                    </div>
+                    <div class="skills__header-text-box" id="skills__header-text--2">
+                        <p class="skills__header-text">Not only is having a blazing fast site a must, but so is being data friendly.</p>
+                    </div>
+                </div>
+                <div class="skills__header">
+                    <div class="skills__icon-box" id="skills__icon--3">
+                        <div class="skills__icon-bg">
+                            <ion-icon name="school-outline" class="skills__icons" alt=""></ion-icon>
+                        </div>
+                    </div>
+                    <div class="skills__header-text-box" id="skills__header-text--3">
+                        <p class="skills__header-text">Always keeping up-to-date on the latest technologies and aquiring new skills.</p>
+                    </div>
+                </div>
+            </aside>
+            <section class="skills__toolbox-box">
+                <div class="toolbox__heading" id="toolbox__heading">
+                    <h3 class="toolbox__heading--header">What's in my Toolbox?</h3>
+                    <p class="toolbox__heading--subheading">All the skills, tools, and technologies at my disposal</p>
+                </div>
+                <section class="toolbox__grid">
+                    <article class="toolbox__group" id="toolbox__group--1">
+                        <h4 class="toolbox__group-heading">Top of the Box</h4>
+                        <p class="toolbox__group-subheading">Tools that get a lot of use. Very familiar with.</p>
+                        <div class="toolbox__icon-box toolbox__icon-box--left">
+                            <div class="toolbox__group-icons skew-left">
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/html.png" alt="Hyper Text Markup Language Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">HTML5</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/css.png" alt="Cascading Style Sheets Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">CSS3</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/git.png" alt="Git Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Git</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/github.png" alt="GitHub Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">GitHub</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/js.png" alt="JavaScript Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">JavaScript</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/node.png" alt="Node Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Node.js</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/react.png" alt="React Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">React</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/mongo.png" alt="MongoDB Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">MongoDB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="toolbox__center-border" id="toolbox__center-border"></div>
+                    <article class="toolbox__group" id="toolbox__group--2">
+                        <h4 class="toolbox__group-heading">Middle of the Box</h4>
+                        <p class="toolbox__group-subheading">Tools that are somewhat used. Familiar after a refresher.</p>
+                        <div class="toolbox__icon-box toolbox__icon-box--right">
+                            <div class="toolbox__group-icons skew-right">
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/expressjs.png" alt="Express Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Express.js</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/mysql.png" alt="MySQL Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">mySQL</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/jquery.png" alt="jQuery Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">jQuery</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/sass.png" alt="Sass Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Sass</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/postgre.png" alt="PostgreSQL Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">PostgreSQL</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </article>
+                    <article class="toolbox__group" id="toolbox__group--3">
+                        <h4 class="toolbox__group-heading">Bottom of the Box</h4>
+                        <p class="toolbox__group-subheading">Tools I've used a few times or a while ago. A little rusty.</p>
+                        <div class="toolbox__icon-box toolbox__icon-box--left">
+                            <div class="toolbox__group-icons skew-left">
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/c++.png" alt="C Plus Plus Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">C++</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/c.png" alt="C Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">C</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/java.png" alt="Java Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Java</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/angular.png" alt="Angular Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Angular</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="toolbox__group" id="toolbox__group--4">
+                        <h4 class="toolbox__group-heading">Still New Tools</h4>
+                        <p class="toolbox__group-subheading">Tools I'm currently learning to use, or need more practice with.</p>
+                        <div class="toolbox__icon-box toolbox__icon-box--right">
+                            <div class="toolbox__group-icons skew-right">
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/python.png" alt="Python Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">Python</p>
+                                </div>
+                                <div class="toolbox__icons">
+                                    <img src="img/skills_logos/php.png" alt="PHP Logo" class="toolbox__logo">
+                                    <p class="toolbox__logo-text">PHP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <div class="section__bottom-link-box" id="section__bottom-link--skills">
+                <a href="#projects" class="section__bottom-link link"><ion-icon name="chevron-down-outline" class="section__bottom-icon"></ion-icon></a>
+            </div>
+        </section>
+        <section class="section__projects" id="projects">
+            <div class="text-box--center" id="project__header">
+                <div class="section__heading--main">
+                    <span class="heading__letters">P</span><span class="heading__letters">r</span><span class="heading__letters">o</span><span class="heading__letters">j</span><span class="heading__letters">e</span><span class="heading__letters">c</span><span class="heading__letters">t</span><span class="heading__letters">s</span>
+                </div>
+            </div>
+            <section class="projects__grid" id="project__grid">
+                <article class="projects__text" id="project__description--1">
+                    <span class="tag tag--full-stack">Full-Stack</span>
+                    <h3 class="projects__heading">CampNS</h3>
+                    <p class="projects__description">
+                        CampNS is a passion project to allow users the ability to quickly search, add, or review
+                        the best camping locations across the province of Nova Scotia, Canada.
+                        Complete full stack site built mainly with Express and multiple APIs.
+                    </p>
+                    <div class="projects__btn-box">
+                        <a href="#" class="projects__btn projects__btn--site">View Site</a>
+                        <a href="#" class="projects__btn projects__btn--github">View GitHub</a>
+                    </div>
+                </article>
+                <div class="column__border" id="project__column-border--1"></div>
+                <article class="projects__imgs" id="project__images--1">
+                    <div class="composition">
+                        <a href="#img--1" class="composition__link">
+                            <img src="img/campNS-campgrounds--thumbnail.png" 
+                                 alt="CampNS Website Screenshot of Campground Information" 
+                                 class="composition__photo composition__photo--p1">
+                        </a>
+                        <a href="#img--2" class="composition__link">
+                            <img src="img/campNS-searchMap--thumbnail.png" 
+                                 alt="CampNS Website Screenshot of a Map For Searching Campgrounds" 
+                                 class="composition__photo composition__photo--p2">
+                        </a>
+                        <a href="#img--3" class="composition__link">
+                            <img src="img/campNS-main--thumbnail.png" 
+                                 alt="CampNS Website Screenshot of the Main Front Page" 
+                                 class="composition__photo composition__photo--p3">
+                        </a>
+                    </div>
+                </article>
+                <div class="row__border row__border--1" id="project__row-border--1"></div>
+                <article class="projects__imgs" id="project__images--2">
+                    <div class="composition">
+                        <a href="#img--4" class="composition__link">
+                            <img src="img/jammming_login.png" 
+                                 alt="Jammming Website Screenshot of Login Page" 
+                                 class="composition__photo composition__photo--p1">
+                        </a>
+                        <a href="#img--5" class="composition__link">
+                            <img src="img/jammming_modal_screenshot.png" 
+                                 alt="Jammming Website Screenshot of Popup With Song Information" 
+                                 class="composition__photo composition__photo--p2">
+                        </a>
+                        <a href="#img--6" class="composition__link">
+                            <img src="img/jammming_screenshot.png" 
+                                 alt="Jammming Website Screenshot of Main Page" 
+                                 class="composition__photo composition__photo--p3">
+                        </a>
+                    </div>
+                </article>
+                <div class="column__border" id="project__column-border--2"></div>
+                <article class="projects__text" id="project__description--2">
+                    <span class="tag tag--front-end">Front-End</span>
+                    <h3 class="projects__heading">Jammming</h3>
+                    <p class="projects__description">
+                        Jammming is a front-end, API focused project working with Spotify's API. It allows users to 
+                        search for songs and add or remove songs from their playlists as well as create new playlists.
+                        Built entirely with React and JavaScript.
+                    </p>
+                    <div class="projects__btn-box">
+                        <a href="#" class="projects__btn projects__btn--site">View Site</a>
+                        <a href="#" class="projects__btn projects__btn--github">View GitHub</a>
+                    </div>
+                </article>
+                <div class="row__border row__border--2" id="project__row-border--2"></div>
+                <article class="projects__text" id="project__description--3">
+                    <span class="tag tag--full-stack">Full-Stack</span>
+                    <h3 class="projects__heading">Currently In Progress</h3>
+                    <p class="projects__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolorem placeat aspernatur rerum 
+                        ullam tempora reiciendis vel. Minus, at impedit perspiciatis nihil esse odit sunt repudiandae 
+                        laboriosam nobis dolorum amet.
+                    </p>
+                    <div class="projects__btn-box">
+                        <a href="#" class="projects__btn projects__btn--site">View Site</a>
+                        <a href="#" class="projects__btn projects__btn--github">View GitHub</a>
+                    </div>
+                </article>
+                <div class="column__border" id="project__column-border--3"></div>
+                <article class="projects__imgs" id="project__images--3">
+                    <div class="composition">
+                        <a href="#img--7" class="composition__link">
+                            <img src="img/under_construction.png" 
+                                 alt="Under Construction Website Screenshot" 
+                                 class="composition__photo composition__photo--p1">
+                        </a>
+                        <a href="#img--8" class="composition__link">
+                            <img src="img/under_construction.png" 
+                                 alt="Under Construction Website Screenshot" 
+                                 class="composition__photo composition__photo--p2">
+                        </a>
+                        <a href="#img--9" class="composition__link">
+                            <img src="img/under_construction.png" 
+                                 alt="Under Construction Website Screenshot" 
+                                 class="composition__photo composition__photo--p3">
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <div class="fullscreen_imgs">
+                <a href="#_" class="overlay" id="img--1">
+                    <img src="img/campNS-campgrounds--fullscreen.png" alt="Fullscreen CampNS Website Screenshot of Campground Information">
+                </a>
+                <a href="#_" class="overlay" id="img--2">
+                    <img src="img/campNS-searchMap--fullscreen.png" alt="Fullscreen CampNS Website Screenshot of a Map For Searching Campgrounds">
+                </a>
+                <a href="#_" class="overlay" id="img--3">
+                    <img src="img/campNS-main--fullscreen.png" alt="Fullscreen CampNS Website Screenshot of the Main Front Page">
+                </a>
+                <a href="#_" class="overlay" id="img--4">
+                    <img src="img/jammming_login.png" alt="Fullscreen Jammming Website Screenshot of Login Page">
+                </a>
+                <a href="#_" class="overlay" id="img--5">
+                    <img src="img/jammming_modal_screenshot.png" alt="Fullscreen Jammming Website Screenshot of Popup With Song Information">
+                </a>
+                <a href="#_" class="overlay" id="img--6">
+                    <img src="img/jammming_screenshot.png" alt="Fullscreen Jammming Website Screenshot of Main Page">
+                </a>
+                <a href="#_" class="overlay" id="img--7">
+                    <img src="img/under_construction.png" alt="Fullscreen Under Construction Website Screenshot">
+                </a>
+                <a href="#_" class="overlay" id="img--8">
+                    <img src="img/under_construction.png" alt="Fullscreen Under Construction Website Screenshot">
+                </a>
+                <a href="#_" class="overlay" id="img--9">
+                    <img src="img/under_construction.png" alt="Fullscreen Under Construction Website Screenshot">
+                </a>
+            </div>
+            <div class="section__bottom-link-box section__bottom-link-box--projects" id="section__bottom-link--projects">
+                <a href="#contact" class="section__bottom-link link"><ion-icon name="chevron-down-outline" class="section__bottom-icon"></ion-icon></a>
+            </div>
+        </section>
+        <section class="section__contact" id="contact">
+            <div class="text-box--center" id="contact__heading">
+                <div class="section__heading--main section__heading--contact">
+                    <span class="heading__letters">C</span><span class="heading__letters">o</span><span class="heading__letters">n</span><span class="heading__letters">t</span><span class="heading__letters">a</span><span class="heading__letters">c</span><span class="heading__letters">t</span>
+                </div>
+                <p class="section__text">
+                    Have any questions or want to work together? <br>
+                    Fill out the form below
+                </p>
+            </div>
+            <section class="contact__grid" id="contact__grid">
+                <aside class="contact__map-box" id="contact__map">
+                    <iframe title="Google Maps View of Kitchener Ontario" class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d370178.4637746237!2d-80.3457025792405!3d43.543640667420604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c74d2afbe55cd%3A0x83aa47d6cdef0f3b!2sWaterloo%20Regional%20Municipality%2C%20ON!5e0!3m2!1sen!2sca!4v1643764700574!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                </aside>
+                <div class="contact__center-border" id="contact__center-border"></div>
+                <article class="contact__form-box" id="contact__form">
+                    <form action="POST" data-netlify="true">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Full Name" id="name" name="name" required>
+                            <label for="name" class="form__label">Full Name</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Email Address" id="email" name="email" required>
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__textarea" name="message" id="message" cols="30" rows="6" placeholder="Your Message" required></textarea>
+                            <label for="message" class="form__label">Message</label>
+                        </div>
+                        <div class="form__group form__btn-box">
+                            <button class="form__submit-btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+            <aside class="text-box--center contact__phone" id="contact__phone">
+                <p class="section__text">Or feel free to call: <a class="contact__phone-link" href="tel:902-233-4466" aria-label="Link to Call Website Creator">902-233-4466</a></p>
+            </aside>
+        </section>
+        <footer class="footer">
+            <div class="footer__btn-box">
+                <a href="#head" class="footer__btn-link--first link"><ion-icon name="chevron-up-outline" class="footer__btn"></ion-icon></a>
+                <a href="#head" class="footer__btn-link--second link"><ion-icon name="chevron-up-outline" class="footer__btn"></ion-icon></a>
+                <a href="#head" class="footer__btn-link--third link"><ion-icon name="chevron-up-outline" class="footer__btn"></ion-icon></a>
+            </div>
+            <div class="text-box--center">
+                <h4 class="footer__heading">Kyle Myers &copy; 2022</h4>
+                <a href="https://www.flaticon.com/" title="html icons" target="_blank" rel='noreferrer'>Icons created by Freepik - Flaticon</a>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

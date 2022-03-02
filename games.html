@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Myers - Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <nav class="main__nav" id="navigation">
+            <div class="nav__logo-box">
+                <a href="index.html" class="nav__link-logo link"><img src="img/logo_transparent_smaller.png" class="nav__logo" alt="Website Main Logo"></a>
+                <div class="logo__border-bottom"></div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-grid">
+      <ion-icon name="help-circle-outline" class="modal__help-btn" id="modal__help-btn"></ion-icon>
+      <div class="wordle__game-box">
+          <div class="wordle__game">
+            <header class="wordle__header">
+              <h1 class="wordle__title">WORDLE</h1>
+            </header>
+            <div class="wordle__board-box">
+              <h2 class="wordle__alert" id="wordle__alert">&nbsp;</h2>
+              <div class="wordle__board" id="board"></div>
+              <div class="modal__play-again">
+                <button class="play-again__btn" id="play-again__btn">Play Again?</button>
+              </div>
+            </div>
+            <div class="wordle__keyboard-box">
+              <div class="keyboard__row">
+                <button class="keyboard__button" data-key="q">q</button>
+                <button class="keyboard__button" data-key="w">w</button>
+                <button class="keyboard__button" data-key="e">e</button>
+                <button class="keyboard__button" data-key="r">r</button>
+                <button class="keyboard__button" data-key="t">t</button>
+                <button class="keyboard__button" data-key="y">y</button>
+                <button class="keyboard__button" data-key="u">u</button>
+                <button class="keyboard__button" data-key="i">i</button>
+                <button class="keyboard__button" data-key="o">o</button>
+                <button class="keyboard__button" data-key="p">p</button>
+              </div>
+              <div class="keyboard__row">
+                <button class="keyboard__button keyboard__indent-left" data-key="a">a</button>
+                <button class="keyboard__button" data-key="s">s</button>
+                <button class="keyboard__button" data-key="d">d</button>
+                <button class="keyboard__button" data-key="f">f</button>
+                <button class="keyboard__button" data-key="g">g</button>
+                <button class="keyboard__button" data-key="h">h</button>
+                <button class="keyboard__button" data-key="j">j</button>
+                <button class="keyboard__button" data-key="k">k</button>
+                <button class="keyboard__button keyboard__indent-right" data-key="l">l</button>
+              </div>
+              <div class="keyboard__row">
+                <button class="keyboard__button keyboard__button--wide" data-key="enter">
+                  Enter
+                </button>
+                <button class="keyboard__button" data-key="z">z</button>
+                <button class="keyboard__button" data-key="x">x</button>
+                <button class="keyboard__button" data-key="c">c</button>
+                <button class="keyboard__button" data-key="v">v</button>
+                <button class="keyboard__button" data-key="b">b</button>
+                <button class="keyboard__button" data-key="n">n</button>
+                <button class="keyboard__button" data-key="m">m</button>
+                <button class="keyboard__button keyboard__button--wide" data-key="del">
+                  DEL
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal__help" id="modal__help">
+            <div class="help__content">
+              <span class="modal__close-btn" id="help__close-btn">&times;</span>
+              <h1 class="modal__title">Instructions</h1>
+              <div class="help__text-box">
+                <ul class="help__text">
+                  <li>Guess the WORDLE in 6 tries.</li>
+                  <li>
+                    Each guess must be a valid five-letter word. Hit the enter button to
+                    submit.
+                  </li>
+                  <li>
+                    After each guess, the color of the tiles will change to show how
+                    close your guess was to the word.
+                  </li>
+                </ul>
+                <img src="img/wordle_example.png" class="modal__img">
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="words.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>

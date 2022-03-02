@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*::selection {
+    color: #772201;
+    background: #02ABEC;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+ion-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-box--center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__heading--main {
+    display: inline-block;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #ECF9FF;
+    padding-top: 2rem;
+    border-bottom: 4px solid #ED4502;
+    box-shadow: 0 1.5rem 2rem -2rem rgba(237, 69, 2, 0.5);
+}
+
+.section__heading--contact {
+    padding-top: 4rem;
+}
+
+.heading__letters {
+    display: inline-block;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.heading__letters:hover {
+    color: #ED4502;
+    animation: bounce 0.3s;
+}
+
+.section__text {
+    color: #C6EEFE;
+    font-size: 2.2rem;
+    padding-top: 2.6rem;
+}
+
+.section__text--left {
+    text-align: left;
+    padding-top: 4rem;
+    padding-bottom: 1.6rem;
+    text-decoration: underline 1px solid #ED4502;
+}
+
+.section__bottom-link-box {
+    margin: 0 auto;
+    width: 4rem;
+    height: 4rem;
+    padding-top: 4rem;
+}
+
+.section__bottom-link-box--projects {
+    padding-top: 10rem;
+}
+
+.section__bottom-icon {
+    width: 4rem;
+    height: 4rem;
+    color: #ED4502;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.section__bottom-icon:hover,
+.section__bottom-link:focus-visible .section__bottom-icon {
+    color: #02ABEC;
+}

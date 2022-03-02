@@ -1,0 +1,426 @@
+.header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* HEADER BACKGROUND VIDEO AND BACKGROUND LOGO                               */
+/* ------------------------------------------------------------------------- */
+
+.header__logo-box {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.header__logo {
+    height: 120rem;
+    filter: blur(0.7rem);
+    animation: headerBgLogoFadeIn 8s forwards;
+    opacity: 0;
+    user-select: none;
+}
+
+.header__bg-video-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    filter: brightness(75%);
+}
+
+#header__bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.rotate-video--1 { transform: scaleX(-1); }
+.rotate-video--2 { transform: scaleY(-1); }
+.rotate-video--3 { transform: scaleX(-1) scaleY(-1); }
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* BACKGROUND VIDEO CONTROLS                                                 */
+/* ------------------------------------------------------------------------- */
+
+.header__video-controls-icon {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    color: #FFF1EC;
+    cursor: pointer;
+    transition: all 0.3s;
+    animation: fadeIn 3s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+.header__video-controls-icon:hover,
+.header__video-controls-icon:focus-visible {
+    outline: none;
+    color: #ED4502;
+    transform: scale(1.3);
+}
+
+.header__video-controls-icon:active {
+    transform: translateY(0.1rem);
+    color: #CB3B02;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/*  "NEED A BREAK?" HEADER RIBBON                                            */
+/* ------------------------------------------------------------------------- */
+
+.header__ribbon::after {
+    content: "Need a Break?";
+    position: absolute;
+    top: 5%;
+    right: -3%;
+    transform: rotate(45deg);
+    background-color: #ED4502;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    padding: 1.2rem 8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s, visibility 2s;
+    color: #000C11;
+    animation: fadeIn 2s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+.header__ribbon:hover::after,
+.header__games-link:focus-visible > .header__ribbon::after {
+    padding-top: 11rem;
+    top: -2.5%;
+    right: -5%;
+    font-size: 1.8rem;
+}
+
+.header__ribbon:active::after {
+    outline: none;
+    transform: rotate(45deg) translateY(0.1rem);
+    background-color: #CB3B02;
+    color: #012533;
+}
+
+.header__ribbon:hover .header__ribbon-icon,
+.header__games-link:focus-visible .header__ribbon-icon {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.header__ribbon:active .header__ribbon-icon {
+    color: #012533;
+}
+
+.header__ribbon-icon {
+    visibility: hidden;
+    opacity: 0;
+    height: 4rem;
+    width: 4rem;
+    top: 3%;
+    right: 1.5%;
+    z-index: 3;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: transform 0.6s;
+    color: #000C11;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* TITLE NAME AND TITLE DESCRIPTION                                          */
+/* ------------------------------------------------------------------------- */
+
+.header__title-box {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.header__title,
+.header__title--primary {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.header__intro-block {
+    width: 0;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.header__intro-block--primary {
+    height: 10rem;
+    background: #ED4502;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    animation: headerIntroBlock--primary 1.2s cubic-bezier(.7, .05, .5, .9) forwards;
+}
+
+.header__text {
+    color: #FFF1EC;
+    animation: fadeIn 2s forwards;
+    opacity: 0;
+}
+
+.header__text--primary {
+    color: #ECF9FF;
+    font-size: 10rem;
+    animation-delay: 1s;
+}
+
+.header__title--secondary {
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
+.header__intro-block--secondary {
+    height: 3.5rem;
+    background: #02ABEC;
+    box-shadow: 0rem 0rem 1.4rem rgba(2, 171, 236, 0.4);
+    animation: headerIntroBlock--secondary 1.2s cubic-bezier(.7, .05, .5, .9) forwards;
+    animation-delay: 1.2s;
+}
+
+.header__text--secondary {
+    font-size: 3.5rem;
+    font-weight: 400;
+    animation-delay: 2s;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* HEADER MAIN BUTTON                                                        */
+/* ------------------------------------------------------------------------- */
+
+.header__btn-block {
+    position: relative;
+    display: flex;
+    top: 6rem;
+    width: 1rem;
+    height: 6rem;
+    background: #ED4502;
+    border-radius: 2px;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    transition: all 0.3s;
+    animation: headerButtonFadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
+    animation-delay: 2.3s;
+    opacity: 0;
+}
+
+.header__btn,
+.header__btn:link,
+.header__btn:visited {
+    width: 20rem;
+    position: relative;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header__btn:focus,
+.header__btn-text:focus,
+.header__btn-link:focus {
+    outline: none;
+}
+
+.header__btn:active {
+    transform: translateY(0.1rem);
+}
+
+.header__btn::before, 
+.header__btn::after,
+.header__btn-border::before, 
+.header__btn-border::after {
+    content:"";
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #ECF9FF;
+}
+  
+.header__btn::before, 
+.header__btn::after {
+    width: 0;
+    height: 0.4rem;
+    transition-delay: 0s;
+}
+
+.header__btn::before {
+    right: 0;
+    top: 0;
+}
+  
+.header__btn::after {
+    left: 0;
+    bottom: 0;
+}
+
+.header__btn:hover::before, 
+.header__btn:hover::after,
+.header__btn:focus-visible::before,
+.header__btn:focus-visible::after {
+    width: 100%;
+    transition-delay: 0.2s;
+    box-shadow: 0rem 0rem 1.4rem rgba(255, 255, 255, 0.4);
+}
+
+.header__btn-border {
+    display: block;
+    padding: 3rem 10rem;
+}
+  
+.header__btn-border::before, 
+.header__btn-border::after {
+    width: 0.4rem;
+    height: 0;
+    transition-delay: 0.2s;
+}
+
+.header__btn-border::before {
+    left: 0;
+    top: 0;
+}
+
+.header__btn-border::after {
+    right: 0;
+    bottom: 0;
+}
+  
+.header__btn:hover .header__btn-border::before, 
+.header__btn:hover .header__btn-border::after,
+.header__btn:focus-visible .header__btn-border::before, 
+.header__btn:focus-visible .header__btn-border::after {
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.header__btn-text {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    right: 2.5rem;
+    padding-top: 0.8rem;
+    color: #ECF9FF;
+    transition: all 0.3s;
+    animation: fadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
+    animation-delay: 2.7s;
+    opacity: 0;
+}
+
+.header__btn-icon {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    display: flex;
+    top: 1.5rem;
+    right: 1.5rem;
+    transition: all 0.3s;
+    color: #ECF9FF;
+    animation: fadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
+    animation-delay: 2.7s;
+    opacity: 0;
+}
+
+.header__btn:hover .header__btn-icon,
+.header__btn:focus-visible .header__btn-icon {
+    transform: rotate(90deg);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SOCIAL MEDIA BUTTONS/LINKS                                                */
+/* ------------------------------------------------------------------------- */
+
+.header__social-btn-box {
+    position: absolute;
+    right: 1%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header__social-btn {
+    height: 6rem;
+    width: 6rem;
+    cursor: pointer;
+    color: #FFF1EC;
+    transition: all 0.3s;
+    animation: moveInRight 0.6s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+.header__social-btn:hover,
+.header__social-link:focus-visible > .header__social-btn{
+    color: #ED4502;
+    padding-bottom: 2.5rem;
+}
+
+.header__social-btn:active {
+    transform: translateY(0.1rem);
+    color: #AA3102;
+}
+
+.header__social-btn::after,
+.header__social-link:focus-visible > .header__social-btn::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    color: #ECF9FF;
+    font-size: 1.4rem;
+    text-decoration: underline solid #ED4502;
+}
+
+.header__social-btn--linkedin:hover::after,
+.header__social-link:focus-visible> .header__social-btn--linkedin::after {
+    content: "LinkedIn";
+    right: 4%;
+}
+
+.header__social-btn--github:hover::after,
+.header__social-link:focus-visible > .header__social-btn--github::after {
+    content: "GitHub";
+    right: 8%;
+}
+
+.header__social-btn--resume:hover::after,
+.header__social-link:focus-visible > .header__social-btn--resume::after {
+    content: "Resume";
+    right: 5%;
+}
+
+/* ------------------------------------------------------------------------- */

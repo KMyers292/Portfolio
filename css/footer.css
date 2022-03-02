@@ -1,0 +1,71 @@
+.footer {
+    margin-top: -6vh;
+    grid-row: 6 / 7;
+    background-color: #2A2B2A;
+}
+
+.footer__btn-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.footer__btn-link--first {
+    position: relative;
+    z-index: 50;
+    transform: translateY(1.6rem);
+}
+
+.footer__btn-link--second,
+.footer__btn-link--third {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.footer__btn-link--second {
+    transition-delay: 0s;
+}
+
+.footer__btn-link--third {
+    transition-delay: 0.05s;
+}
+
+.footer__btn-link--first:hover + .footer__btn-link--second,
+.footer__btn-link--first:hover ~ .footer__btn-link--third,
+.footer__btn-link--first:focus + .footer__btn-link--second,
+.footer__btn-link--first:focus ~ .footer__btn-link--third {
+    opacity: 1;
+    visibility: visible;
+    color: #992C02;
+}
+
+.footer__btn-link--first:hover + .footer__btn-link--second,
+.footer__btn-link--first:focus + .footer__btn-link--second {
+    transition-delay: 0.05s;
+    transform: translateY(-0.4rem);
+}
+
+.footer__btn-link--first:hover ~ .footer__btn-link--third,
+.footer__btn-link--first:focus ~ .footer__btn-link--third {
+    transform: translateY(0.6rem);
+    transition-delay: 0s;
+}
+
+.footer__btn {
+    width: 4rem;
+    height: 4rem;
+    color: #ED4502;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.footer__heading {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #D9F4FF;
+    opacity: 0.5;
+}

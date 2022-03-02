@@ -1,0 +1,170 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 100vh 160vh 190vh 100vh 10rem;
+    position: relative;
+}
+
+.main__nav {
+    grid-row: 1 / 2;
+
+    background-color: #202020;
+    border-bottom: 3px solid #02ABEC;
+    box-shadow: 0 1.5rem 1.4rem -1.5rem rgba(2,171,236,0.5);
+
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    top: 0;
+    left: 0;
+}
+
+.main__nav > * {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav__logo {
+    width: 14rem;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    border-bottom: 1px solid transparent;
+}
+
+.logo__border-bottom {
+    position: absolute;
+    bottom: 1rem;
+    left: 2.2rem;
+    width: 10rem;
+    height: 0.2rem;
+    background: #ED4502;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.nav__link-logo:hover + .logo__border-bottom,
+.nav__link-logo:focus-visible + .logo__border-bottom {
+    opacity: 1;
+}
+
+.nav__link-btn-box {
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.nav__link-btn {
+    text-decoration: none;
+    color: #FFF1EC;
+    position: relative;
+}
+
+.nav__link-btn:hover,
+.nav__link-btn:focus-visible,
+.active {
+    color: #C6EEFE;
+}
+
+.nav__link-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 0;
+    height: 0.3rem;
+    background: #ED4502;
+    filter: drop-shadow(0 0 0.4rem rgba(237, 69, 2, 0.5));
+    transition: all 0.4s;
+}
+
+.nav__link-btn:hover::after,
+.nav__link-btn:focus-visible::after,
+.active::after {
+    width: 100%;
+}
+
+.nav__game-btn {
+    width: 5rem;
+    height: 5rem;
+    color: #ECF9FF;
+    padding-right: 1.5rem;
+    transition: all 0.3s;
+}
+
+.nav__game-btn:hover,
+.nav__game-btn-link:focus-visible .nav__game-btn {
+    color: #ED4502;
+}
+
+.sticky .main__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    z-index: 100;
+}
+
+.sticky .section__about,
+.sticky .section__skills,
+.sticky .section__projects,
+.sticky .section__contact {
+    padding-top: 8rem;
+}
+
+
+/* MOBILE */
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-mobile-nav {
+    height: 5rem;
+    width: 5rem;
+    color: #ED4502;
+    padding-right: 1rem;
+}
+
+.icon-mobile-nav[name='close-outline'] {
+    display: none;
+}
+
+.main__nav-mobile {
+    background-color: rgba(32, 32, 32, 0.98);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    z-index: 99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.nav__link-btn-box--mobile {
+    font-size: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 6rem;
+}

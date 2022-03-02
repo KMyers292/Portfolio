@@ -1,0 +1,204 @@
+.section__contact {
+    background-color: #001822;
+    grid-row: 5 / 6;
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 95%, 0 100%);
+    margin-top: -12vh;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 30% 0.2rem 30%;
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+    padding-top: 4rem;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* CONTACT MAP                                                               */
+/* ------------------------------------------------------------------------- */
+
+.contact__map {
+    border: 3px solid #ED4502;
+    border-radius: 2px;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    width: 100%;
+    height: 95%;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.contact__center-border {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background: #02aaec1e;
+    box-shadow: 0rem 0rem 1.4rem rgba(2, 171, 236, 0.2);
+    height: 60%;
+    align-self: center;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* CONTACT FORM                                                              */
+/* ------------------------------------------------------------------------- */
+
+.form__group:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    display: block;
+    width: 90%;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    background-color: #C6EEFE;
+    border: 2px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 1.4rem -1.5rem rgba(237, 69, 2, 0.5);
+    transition: all 0.3s;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.6);
+}
+
+.form__input:invalid {
+    border-bottom: 4px solid #ED4502;
+}
+
+.form__input:invalid:focus {
+    border: 2px solid #ED4502;
+    border-bottom: 4px solid #ED4502;
+}
+
+.form__input:not(:invalid) {
+    border-bottom: 4px solid #02ABEC;
+    box-shadow: 0 1.5rem 1.4rem -1.5rem rgba(2, 171, 236, 0.5);
+}
+
+.form__input:focus:not(:invalid) {
+    border: 2px solid #02ABEC;
+    border-bottom: 4px solid #02ABEC;
+    box-shadow: 0rem 0rem 1.4rem rgba(2, 171, 236, 0.6);
+}
+
+.form__label {
+    display: block;
+    color: #C6EEFE;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.form__btn-box {
+    text-align: right;
+    position: relative;
+    right: 10%;
+}
+
+.form__submit-btn {
+    border: 2px solid #C6EEFE;
+    border-radius: 2px;
+    text-decoration: none;
+    background: transparent;
+    padding: 1.2rem 3.8rem;
+    font-size: 2rem;
+    color: #C6EEFE;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.form__submit-btn:hover,
+.form__submit-btn:focus {
+    background: #02ABEC;
+    border: 2px solid #02ABEC;
+    box-shadow: 0rem 0rem 1.4rem rgba(2, 171, 236, 0.4);
+}
+
+.form__submit-btn:active,
+.form__submit-btn:focus {
+    outline: none;
+    transform: translateY(0.1rem);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* CONTACT PHONE NUMBER                                                      */
+/* ------------------------------------------------------------------------- */
+
+.contact__phone-link {
+    color: #ED4502;
+    transition: all 0.3s;
+}
+
+.contact__phone-link:hover,
+.contact__phone-link:focus {
+    outline: none;
+    color: #992C02;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ANIMATIONS FOR CONTACT SECTION                                            */
+/* ------------------------------------------------------------------------- */
+
+#contact__heading,
+#contact__map,
+#contact__form,
+#contact__phone {
+    opacity: 0;
+}
+
+#contact__center-border {
+    opacity: 0;
+    height: 0;
+}
+
+.move-in-down__header {
+    animation: moveInDown 0.8s forwards;
+}
+
+.move-in-up__phone {
+    animation: moveInUp 0.8s forwards;
+    animation-delay: 0.3s;
+}
+
+.move-in-left__map {
+    animation: moveInLeft 0.7s forwards;
+    animation-delay: 0.7s;
+}
+
+.move-in-right__form {
+    animation: moveInRight 0.7s forwards;
+    animation-delay: 1.0s;
+}
+
+.grow-out-height__border {
+    animation: growHeight 0.7s forwards;
+    animation-delay: 1.2s;
+}
+
+/* ------------------------------------------------------------------------- */

@@ -1,0 +1,227 @@
+.section__about {
+    grid-row: 2 / 3;
+    background-color: #000C11;
+    overflow: hidden;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 8rem;
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ABOUT SECTION PROFILE PICTURE                                             */
+/* ------------------------------------------------------------------------- */
+
+.about__photo-box {
+    justify-self: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__photo {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #ED4502;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* CONTACT INFORMATION                                                       */
+/* ------------------------------------------------------------------------- */
+
+.about__border {
+    background: #ED4502;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    width: 20%;
+    height: 2px;
+    margin: 3rem auto;
+}
+
+.about__info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 6rem;
+}
+
+.about__info {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #C6EEFE;
+    transition: all 0.3s;
+}
+
+.about__info:hover,
+.about__info:focus-visible {
+    outline: none;
+    color: #ED4502;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SOCIAL MEDIA LINKS                                                        */
+/* ------------------------------------------------------------------------- */
+
+.about__social-btn-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about__social-btn {
+    width: 5rem;
+    height: 5rem;
+    color: #C6EEFE;
+    padding-bottom: 2rem;
+    transition: all 0.3s;
+}
+
+.about__social-btn:hover,
+.about__social-btn-link:focus-visible > .about__social-btn {
+    outline: none;
+    color: #ED4502;
+}
+
+.about__social-btn::after,
+.about__social-btn-link:focus-visible > .about__social-btn::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    color: #C6EEFE;
+    font-size: 1.2rem;
+    text-decoration: underline solid #ED4502;
+}
+
+.about__social-btn--linkedin:hover::after,
+.about__social-btn-link:focus-visible > .about__social-btn--linkedin::after {
+    content: "LinkedIn";
+}
+
+.about__social-btn--github:hover::after,
+.about__social-btn-link:focus-visible > .about__social-btn--github::after {
+    content: "GitHub";
+    right: 11%;
+}
+
+.about__social-btn--resume:hover::after,
+.about__social-btn-link:focus-visible > .about__social-btn--resume::after {
+    content: "Resume";
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ABOUT SECTION TEXT                                                        */
+/* ------------------------------------------------------------------------- */
+
+.about__main-text-box {
+   width: 70%;
+   justify-self: center;
+}
+
+.about__main-text {
+    color: #C6EEFE;
+    font-size: 2.2rem;
+    line-height: 1.6;
+    padding-left: 2rem;
+    border-left: 2px solid #ED4502;
+    box-shadow: -1.3rem 0 1.4rem -1.5rem rgba(237,69,2,0.5);
+}
+
+.about__main-text:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ANIMATIONS FOR ABOUT SECTION                                              */
+/* ------------------------------------------------------------------------- */
+
+#about__header,
+#about__photo,
+#about__info--address,
+#about__info--phone,
+#about__info--email,
+#about__social--linkedin,
+#about__social--github,
+#about__social--resume,
+#about__main-text--1, 
+#about__main-text--2, 
+#about__main-text--3,
+#section__bottom-link--about {
+    opacity: 0;
+}
+
+#about__row-border {
+    opacity: 0;
+    width: 0;
+}
+
+.move-in-down__header {
+    animation: moveInDown 0.8s forwards;
+}
+
+.move-in-down__info--address,
+.move-in-down__info--phone,
+.move-in-down__info--email {
+    animation: moveInDown--small 0.5s forwards;
+}
+
+.move-in-right__main-text--1,
+.move-in-right__main-text--2,
+.move-in-right__main-text--3 {
+    animation: moveInRight 0.7s forwards;
+}
+
+.move-in-left__photo,
+.move-in-left__social--linkedin,
+.move-in-left__social--github,
+.move-in-left__social--resume {
+    animation: moveInLeft 0.7s forwards;
+}
+
+.move-in-left__photo { animation-delay: 0.5s; }
+
+.move-in-down__info--email { animation-delay: 0.8s; }
+.move-in-down__info--phone { animation-delay: 1s; }
+.move-in-down__info--address { animation-delay: 1.2s; }
+
+.grow-out-wide__row-border {
+    animation: growWidth--small 0.7s forwards;
+    animation-delay: 1.4s;
+}
+
+.move-in-left__social--resume { animation-delay: 1.6s; }
+.move-in-left__social--github { animation-delay: 1.8s; }
+.move-in-left__social--linkedin { animation-delay: 2.0s; }
+
+.move-in-right__main-text--1 { animation-delay: 2.3s; }
+.move-in-right__main-text--2 { animation-delay: 2.5s; }
+.move-in-right__main-text--3 { animation-delay: 2.7s; }
+
+.move-in-up__bottom-link--about {
+    animation: moveInUp 0.7s forwards;
+    animation-delay: 2.9s;
+}
+
+/* ------------------------------------------------------------------------- */

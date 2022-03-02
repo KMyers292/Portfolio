@@ -1,0 +1,305 @@
+.section__projects {
+    grid-row: 4 / 5;
+    background-color: #000C11;
+    overflow: hidden;
+}
+
+.projects__grid {
+    width: 90%;
+    padding-top: 8rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 0.1rem 50%;
+    grid-template-rows: 1fr 0.2rem 1fr 0.2rem 1fr;
+    row-gap: 8rem;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* PROJECT DESCRIPTIONS                                                      */
+/* ------------------------------------------------------------------------- */
+
+.column__border {
+    height: 60%;
+    align-self: center;
+    background: #02aaec1e;
+    box-shadow: 0rem 0rem 0.9rem rgba(2, 171, 236, 0.2);
+}
+
+.row__border {
+    background: #ed44028f;
+    width: 70%;
+    justify-self: center;
+    box-shadow: 0rem 0rem 0.9rem rgba(237, 69, 2, 0.6);
+}
+
+.row__border--1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.row__border--2 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+}
+
+.projects__text {
+    width: 70%;
+    justify-self: center;
+    align-self: baseline;
+}
+
+.tag {
+    padding: 0.2rem 0.4rem;
+    font-size: 1.2rem;
+    color: #000C11;
+    border-radius: 100px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.tag--full-stack {
+    background-color: #7bce00;
+    box-shadow: 0rem 0rem 1.8rem rgba(123, 206, 0, 0.2);
+}
+
+.tag--front-end {
+    background-color: #ddbf00;
+    box-shadow: 0rem 0rem 1.8rem rgba(221, 191, 0, 0.2);
+}
+
+.projects__heading {
+    color: #ECF9FF;
+    font-size: 3.5rem;
+    text-decoration: underline 1px solid #ED4502;
+    padding-bottom: 1.5rem;
+}
+
+.projects__description {
+    color: #C6EEFE;
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+.projects__btn-box {
+    display: flex;
+    column-gap: 1.2rem;
+}
+
+.projects__btn {
+    text-decoration: none;
+    padding: 1.5rem 3.6rem;
+    display: inline-block;
+    border-radius: 2px;
+    transition: all 0.3s;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: #ED4502;
+    color: #C6EEFE;
+}
+
+.projects__btn--site {
+    border: 2px solid transparent;
+}
+
+.projects__btn--site:hover,
+.projects__btn--site:focus-visible {
+    background-color: #992C02;
+    border: 2px solid #C6EEFE;
+    box-shadow: 0rem 0rem 1.4rem rgba(198, 238, 254, 0.4);
+}
+
+.projects__btn--github {
+    background: transparent;
+    border: 2px solid #ED4502;
+    color: #ED4502;
+    padding: 1.5rem 3.2rem;
+}
+
+.projects__btn--github:hover,
+.projects__btn--github:focus-visible {
+    background: #C6EEFE;
+    border: 2px solid #C6EEFE;
+    color: #992C02;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* PROJECT IMAGES                                                            */
+/* ------------------------------------------------------------------------- */
+
+.projects__imgs {
+    justify-self: center;
+    width: 60%;
+    height: 35vh;
+    padding-top: 2rem;
+}
+
+.composition {
+    position: relative;
+}
+
+.composition__photo {
+    width: 70%;
+    height: 23vh;
+    box-shadow: 0rem 0rem 1rem rgba(2, 171, 236, 0.2);
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+}
+
+.composition__photo--p1 {
+    left: 0;
+    top: -2rem;
+}
+
+.composition__photo--p2 {
+    right: -4rem;
+    top: 2rem;
+}
+
+.composition__photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
+
+.composition__photo:hover,
+.composition__link:focus-visible .composition__photo {
+    outline: 0.4rem solid #ED4502;
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0rem 0rem 4rem rgba(237, 69, 2, 0.6);
+    z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95);
+}
+
+.overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s;
+}
+  
+.overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    width: 60%;
+    height: 100%;
+    margin-top: 10rem;
+    transform: scale(0.3);
+    transition: transform .3s;
+    border: 2px solid #ED4502;
+    border-radius: 5px;
+}
+  
+.overlay:target {
+    visibility: visible;
+    outline: none;
+    opacity: 1;
+}
+  
+.overlay:target img {
+      transform: scale(1);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* ANIMATIONS FOR PROJECTS SECTION                                           */
+/* ------------------------------------------------------------------------- */
+
+#project__header,
+#project__description--1,
+#project__description--2,
+#project__description--3,
+#project__images--1,
+#project__images--2,
+#project__images--3,
+#section__bottom-link--projects {
+    opacity: 0;
+}
+
+#project__row-border--1,
+#project__row-border--2 {
+    opacity: 0;
+    width: 0;
+}
+
+#project__column-border--1,
+#project__column-border--2,
+#project__column-border--3 {
+    opacity: 0;
+    height: 0;
+}
+
+.move-in-down__header {
+    animation: moveInDown 0.8s forwards;
+}
+
+.move-in-left__description--1,
+.move-in-left__images--2,
+.move-in-left__description--3 {
+    animation: moveInLeft 0.7s forwards;
+}
+
+.move-in-right__images--1,
+.move-in-right__description--2,
+.move-in-right__images--3 {
+    animation: moveInRight 0.7s forwards;
+}
+
+.grow-out-height__border-col--1,
+.grow-out-height__border-col--2,
+.grow-out-height__border-col--3 {
+    animation: growHeight 0.7s forwards;
+}
+
+.grow-out-width__border-row--1,
+.grow-out-width__border-row--2 {
+    animation: growWidth 0.7s forwards;
+}
+
+/* Project 1 */
+.move-in-left__description--1 { animation-delay: 0.3s; }
+.move-in-right__images--1 { animation-delay: 0.5s; }
+.grow-out-height__border-col--1 { animation-delay: 0.6s; }
+
+.grow-out-width__border-row--1 { animation-delay: 0.8s; }
+
+/* Project 2 */
+.move-in-right__description--2 { animation-delay: 1s; }
+.move-in-left__images--2 { animation-delay: 1.2s; }
+.grow-out-height__border-col--2 { animation-delay: 1.3s; }
+
+.grow-out-width__border-row--2 { animation-delay: 1.5s; }
+
+/* Project 3 */
+.move-in-left__description--3 { animation-delay: 1.7s; }
+.move-in-right__images--3 { animation-delay: 1.9s; }
+.grow-out-height__border-col--3 { animation-delay: 2s; }
+
+.move-in-up__bottom-link--projects {
+    animation: moveInUp 0.7s forwards;
+    animation-delay: 2.2s;
+}
+
+/* ------------------------------------------------------------------------- */
