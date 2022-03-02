@@ -3,6 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 8rem 100vh 160vh 190vh 100vh 10rem;
     position: relative;
+    overflow-x: hidden;
 }
 
 .main__nav {
