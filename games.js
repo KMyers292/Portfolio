@@ -85,22 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
       return "square__letter--incorrect";
     }
 
-    // selected letter is in the winning word but incorrect position.
+    // selected letter is the correct letter in the correct position.
     if (letter === word.charAt(index)) {
       return "square__letter--correct-letter-and-place";
     }
 
-    const guessedMoreThanOnce = currentWordLetters.filter((element) => element === letter);
+    const guessedMoreThanOnce = currentWordLetters.filter((element) => element === letter).length > 1;
 
     // selected letter is guessed more than once.
-    if (guessedMoreThanOnce.length > 1) {
+    if (!guessedMoreThanOnce) {
       return "square__letter--correct";
     }
 
-    const existsMoreThanOnce = word.split("").filter((element) => element === letter);
+    const existsMoreThanOnce = word.split("").filter((element) => element === letter).length > 1;
 
     // selected letter is guessed more than once and exists more than once.
-    if (existsMoreThanOnce.length > 1) {
+    if (existsMoreThanOnce) {
       return "square__letter--correct";
     }
 
