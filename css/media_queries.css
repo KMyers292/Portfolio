@@ -650,6 +650,14 @@
         right: 0%;
     }
 
+    .move-in-left__map {
+        animation-delay: 1s;
+    }
+    
+    .move-in-right__form {
+        animation-delay: 0.7s;
+    }
+
     /***********************************************************************/
 
     .footer__btn-box {
