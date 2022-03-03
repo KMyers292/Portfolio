@@ -4,32 +4,36 @@ body {
 
 .main__nav {
     position: relative;
+    overflow-x: hidden;
 }
 
-.main-grid {
+.main-content {
+    position: relative;
     justify-items: center;
     padding-top: 2rem;
-    height: 90vh;
 }
 
-.modal__close-btn {
-    color: #02ABEC;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 3.5rem;
-    font-weight: 600;
-    padding-right: 1.5rem;
-    transition: all 0.3s;
+.wordle__game {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* GAMES SECTION HEADER                                                      */
+/* ------------------------------------------------------------------------- */
+
+.wordle__header {
+    border-bottom: 2px solid #ED4502;
 }
 
 .modal__help-btn {
     color: #ED4502;
-    font-size: 3rem;
+    font-size: 4rem;
     cursor: pointer;
     position: absolute;
     top: 1.5rem;
-    left: 0;
+    right: 1rem;
     padding-left: 1.5rem;
     transition: all 0.3s;
 }
@@ -42,32 +46,21 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-
-.wordle__game-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.wordle__game {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-  
-.wordle__header {
-    border-bottom: 2px solid #ED4502;
-}
   
 .wordle__title {
     color: #C6EEFE;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     text-align: center;
 }
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* GAME BOARD & GAMEPLAY ALERT                                               */
+/* ------------------------------------------------------------------------- */
   
 .wordle__board-box {
     display: flex;
@@ -83,7 +76,7 @@ body {
     color: #02ABEC;
     opacity: 0;
     padding-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 @keyframes fade-out {
@@ -113,12 +106,12 @@ body {
   
 .board__square {
     display: flex;
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 7rem;
+    height: 7rem;
     justify-content: center;
     align-items: center;
     border: 2px solid #818181;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 2rem;
     color: #C6EEFE;
@@ -143,101 +136,14 @@ body {
     background-color: #3E8A37;
     border-color: #3E8A37;
 }
-  
-.wordle__keyboard-box {
-    height: 16rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-  
-.keyboard__row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0.8rem;
-    touch-action: manipulation;
-}
-  
-.keyboard__button {
-    font-family: inherit;
-    font-weight: 700;
-    border: none;
-    margin-right: 0.6rem;
-    height: 5.8rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    user-select: none;
-    background-color: #818181;
-    color: #fff;
-    padding: 0 2.3rem;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.keyboard__button--wide {
-    padding: 0 3.5rem;
-}
 
-.keyboard__indent-left {
-    margin-left: 1rem;
-}
+/* ------------------------------------------------------------------------- */
 
-.keyboard__indent-right {
-    margin-right: 1rem;
-}
-  
-.modal__help {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-}
-  
-.help__content {
-    background-color: #121213;
-    border: 1px solid #ED4502;
-    margin: 3rem auto;
-    padding: 2rem;
-    width: 80%;
-    height: 80%;
-    color: #C6EEFE;
-    max-width: 50rem;
-    position: relative;
-}
 
-.modal__title {
-    text-align: center;
-    text-decoration: underline 1px solid #ED4502;
-}
 
-.help__text-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.help__text {
-    font-size: 1.6rem;
-    padding-top: 2rem;
-}
-
-.help__text li:not(:last-child) {
-    padding-bottom: 0.6rem;
-}
-  
-.modal__img {
-    width: 90%;
-    padding-top: 3rem;
-}
+/* ------------------------------------------------------------------------- */
+/* GAME PLAY AGAIN BUTTON                                                    */
+/* ------------------------------------------------------------------------- */
 
 .modal__play-again {
     position: absolute;
@@ -272,78 +178,132 @@ body {
     transform: translateY(0.1rem);
 }
 
+/* ------------------------------------------------------------------------- */
 
 
-@media (max-width: 57em) {
-    html {
-        font-size: 58%;
-    }
 
-    .keyboard__button {
-        height: 5.2rem;
-        padding: 0 2rem;
-    }
+/* ------------------------------------------------------------------------- */
+/* GAME KEYBOARD                                                             */
+/* ------------------------------------------------------------------------- */
+  
+.wordle__keyboard-box {
+    padding-top: 2rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+  
+.keyboard__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    touch-action: manipulation;
+}
+  
+.keyboard__button {
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    margin-right: 0.6rem;
+    height: 6.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: #818181;
+    color: #fff;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 44em) {
-    html {
-        font-size: 55%;
-    }
-
-    .modal__content {
-        width: 90%;
-    }
+.keyboard__button:active {
+    transform: translateY(0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+  
+.keyboard__button--wide {
+    padding: 0 3.5rem;
 }
 
-@media (max-width: 38em) {
-    html {
-        font-size: 53%;
-    }
-
-    .board__square {
-        min-width: 5rem;
-        min-height: 5rem;
-    }
-
-    .keyboard__button {
-        height: 4.8rem;
-        padding: 0 1.6rem;
-    }
+.keyboard__indent-left {
+    margin-left: 1rem;
 }
 
-@media (max-width: 32em) {
-    html {
-        font-size: 51%;
-    }
-
-    .keyboard__button {
-        height: 4.5rem;
-        padding: 0 1.3rem;
-    }
+.keyboard__indent-right {
+    margin-right: 1rem;
 }
 
-@media (max-width: 26em) {
-    html {
-        font-size: 50%;
-    }
+/* ------------------------------------------------------------------------- */
 
-    .modal__content {
-        width: 100%;
-    }
 
-    .keyboard__button {
-        height: 4.2rem;
-        padding: 0 1rem;
-    }
+
+/* ------------------------------------------------------------------------- */
+/* GAME HELP MODAL                                                           */
+/* ------------------------------------------------------------------------- */
+  
+.modal__help {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+  
+.help__content {
+    background-color: #121213;
+    border: 1px solid #ED4502;
+    margin: 8rem auto;
+    padding: 2rem;
+    width: 30%;
+    height: 80%;
+    color: #C6EEFE;
+    position: relative;
 }
 
-@media (max-width: 19em) {
-    html {
-        font-size: 49%;
-    }
-
-    .keyboard__button {
-        height: 4rem;
-        padding: 0 0.8rem;
-    }
+.modal__close-btn {
+    color: #02ABEC;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding-right: 1.5rem;
+    transition: all 0.3s;
 }
+
+.modal__title {
+    text-align: center;
+    text-decoration: underline 1px solid #ED4502;
+    font-size: 2.5rem;
+}
+
+.help__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__text {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+}
+
+.help__text li:not(:last-child) {
+    padding-bottom: 0.6rem;
+}
+  
+.modal__img {
+    width: 90%;
+    padding-top: 3rem;
+}
+
+/* ------------------------------------------------------------------------- */
