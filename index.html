@@ -7,7 +7,7 @@
     <link rel="icon" href="img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" rel="preload" as="style"> 
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/index.css">
@@ -102,7 +102,7 @@
             </div>
             <div class="about__grid" id="about__grid">
                 <aside class="about__photo-box">
-                    <img src="img/headshot.webp" alt="Headshot of Website Creator" class="about__photo" id="about__photo">
+                    <img src="img/headshot.webp" alt="Headshot of Website Creator" class="about__photo" id="about__photo" loading="lazy">
                     <div class="about__info-box">
                         <a href="https://www.google.com/maps/place/Kitchener,+ON/@43.430413,-80.5463549,12z/" aria-label="Link to Google Maps of Kitchener Ontario" target="_blank" rel='noreferrer' class="about__info" id="about__info--address">Kitchener Ontario, Canada</a>
                         <a href="tel:902-233-4466" class="about__info" id="about__info--phone" aria-label="Link to Call Website Creator">(902)-233-4466</a>
@@ -320,17 +320,20 @@
                         <a href="#img--1" class="composition__link">
                             <img src="img/campNS-campgrounds.webp" 
                                  alt="CampNS Website Screenshot of Campground Information" 
-                                 class="composition__photo composition__photo--p1">
+                                 class="composition__photo composition__photo--p1"
+                                 loading="lazy">
                         </a>
                         <a href="#img--2" class="composition__link">
                             <img src="img/campNS-searchMap.webp" 
                                  alt="CampNS Website Screenshot of a Map For Searching Campgrounds" 
-                                 class="composition__photo composition__photo--p2">
+                                 class="composition__photo composition__photo--p2"
+                                 loading="lazy">
                         </a>
                         <a href="#img--3" class="composition__link">
                             <img src="img/campNS-main.webp" 
                                  alt="CampNS Website Screenshot of the Main Front Page" 
-                                 class="composition__photo composition__photo--p3">
+                                 class="composition__photo composition__photo--p3"
+                                 loading="lazy">
                         </a>
                     </div>
                 </article>
@@ -340,17 +343,20 @@
                         <a href="#img--4" class="composition__link">
                             <img src="img/jammming_login.webp" 
                                  alt="Jammming Website Screenshot of Login Page" 
-                                 class="composition__photo composition__photo--p1">
+                                 class="composition__photo composition__photo--p1"
+                                 loading="lazy">
                         </a>
                         <a href="#img--5" class="composition__link">
                             <img src="img/jammming_modal_screenshot.webp" 
                                  alt="Jammming Website Screenshot of Popup With Song Information" 
-                                 class="composition__photo composition__photo--p2">
+                                 class="composition__photo composition__photo--p2"
+                                 loading="lazy">
                         </a>
                         <a href="#img--6" class="composition__link">
                             <img src="img/jammming_screenshot.webp" 
                                  alt="Jammming Website Screenshot of Main Page" 
-                                 class="composition__photo composition__photo--p3">
+                                 class="composition__photo composition__photo--p3"
+                                 loading="lazy">
                         </a>
                     </div>
                 </article>
@@ -388,48 +394,51 @@
                         <a href="#img--7" class="composition__link">
                             <img src="img/under_construction.webp" 
                                  alt="Under Construction Website Screenshot" 
-                                 class="composition__photo composition__photo--p1">
+                                 class="composition__photo composition__photo--p1"
+                                 loading="lazy">
                         </a>
                         <a href="#img--8" class="composition__link">
                             <img src="img/under_construction.webp" 
                                  alt="Under Construction Website Screenshot" 
-                                 class="composition__photo composition__photo--p2">
+                                 class="composition__photo composition__photo--p2"
+                                 loading="lazy">
                         </a>
                         <a href="#img--9" class="composition__link">
                             <img src="img/under_construction.webp" 
                                  alt="Under Construction Website Screenshot" 
-                                 class="composition__photo composition__photo--p3">
+                                 class="composition__photo composition__photo--p3"
+                                 loading="lazy">
                         </a>
                     </div>
                 </article>
             </section>
             <div class="fullscreen_imgs">
                 <a href="#_" class="overlay" id="img--1">
-                    <img src="img/campNS-campgrounds.webp" alt="Fullscreen CampNS Website Screenshot of Campground Information">
+                    <img src="img/campNS-campgrounds.webp" alt="Fullscreen CampNS Website Screenshot of Campground Information" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--2">
-                    <img src="img/campNS-searchMap.webp" alt="Fullscreen CampNS Website Screenshot of a Map For Searching Campgrounds">
+                    <img src="img/campNS-searchMap.webp" alt="Fullscreen CampNS Website Screenshot of a Map For Searching Campgrounds" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--3">
-                    <img src="img/campNS-main.webp" alt="Fullscreen CampNS Website Screenshot of the Main Front Page">
+                    <img src="img/campNS-main.webp" alt="Fullscreen CampNS Website Screenshot of the Main Front Page" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--4">
-                    <img src="img/jammming_login.webp" alt="Fullscreen Jammming Website Screenshot of Login Page">
+                    <img src="img/jammming_login.webp" alt="Fullscreen Jammming Website Screenshot of Login Page" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--5">
-                    <img src="img/jammming_modal_screenshot.webp" alt="Fullscreen Jammming Website Screenshot of Popup With Song Information">
+                    <img src="img/jammming_modal_screenshot.webp" alt="Fullscreen Jammming Website Screenshot of Popup With Song Information" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--6">
-                    <img src="img/jammming_screenshot.webp" alt="Fullscreen Jammming Website Screenshot of Main Page">
+                    <img src="img/jammming_screenshot.webp" alt="Fullscreen Jammming Website Screenshot of Main Page" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--7">
-                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot">
+                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--8">
-                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot">
+                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot" loading="lazy">
                 </a>
                 <a href="#_" class="overlay" id="img--9">
-                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot">
+                    <img src="img/under_construction.webp" alt="Fullscreen Under Construction Website Screenshot" loading="lazy">
                 </a>
             </div>
             <div class="section__bottom-link-box section__bottom-link-box--projects" id="section__bottom-link--projects">
