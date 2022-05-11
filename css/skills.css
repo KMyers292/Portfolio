@@ -5,163 +5,134 @@
 }
 
 
+
 /* ------------------------------------------------------------------------- */
-/* SKILLS SECTION QUICK SKILLS                                               */
+/* SKILLS SECTION MAIN TEXT                                                  */
 /* ------------------------------------------------------------------------- */
 
-.skills__header-box {
+.skills__main-text-box {
+    padding-top: 8rem;
+    width: 70%;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+.skills__main-text {
+    color: #C6EEFE;
+    font-size: 2.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SKILLS SECTION SKILLS BOXES                                               */
+/* ------------------------------------------------------------------------- */
+
+.skills__skill-boxes {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 80%;
     margin: 0 auto;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    border-bottom: 2px solid #ed44028f;
-    box-shadow: 0 1.5rem 2rem -2rem rgba(237, 69, 2, 0.5);
+    padding-top: 12rem;
 }
 
-.skills__header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.skills__icon-box {
-    width: auto;
-    margin: 0 auto;
-}
-
-.skills__icon-bg {
-    background-color: #ED4502;
-    padding: 2rem;
-    border-radius: 50%;
-    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.3);
-}
-
-.skills__icons {
-    width: 5rem;
-    height: 5rem;
-    color: #C6EEFE;
-}
-
-.skills__header-text-box {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.skills__header-text {
-    font-size: 1.8rem;
-    padding-top: 2rem;
-    text-align: center;
-    color: #C6EEFE;
-}
-
-/* ------------------------------------------------------------------------- */
-
-
-
-/* ------------------------------------------------------------------------- */
-/* SKILLS TOOLBOXES                                                          */
-/* ------------------------------------------------------------------------- */
-
-.skills__toolbox-box {
-    padding-top: 6rem;
-    margin: 0 auto;
-}
-
-.toolbox__heading {
-    color: #ECF9FF;
-    text-align: center;
-}
-
-.toolbox__heading--header {
-    display: inline-block;
-    font-size: 3.5rem;
-    border-bottom: 2px solid #ED4502;
-    box-shadow: 0 1.5rem 2rem -2rem rgba(237, 69, 2, 0.5);
-}
-
-.toolbox__heading--subheading {
-    color: #C6EEFE;
-    padding-top: 2rem;
-    font-size: 1.8rem;
-}
-
-.toolbox__grid {
-    display: grid;
-    grid-template-columns:  35% 0.2rem 35%;
-    grid-template-rows: 40% 40%;
-    justify-content: space-around;
-    row-gap: 10rem;
-    padding-top: 4rem;
-}
-
-.toolbox__center-border {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    background: #02aaec1e;
-    box-shadow: 0rem 0rem 0.9rem rgba(2, 171, 236, 0.2);
-    height: 60%;
-    align-self: center;
-}
-
-.toolbox__group-heading {
-    text-align: center;
-    font-size: 3rem;
-    color: #ECF9FF;
-    text-decoration: underline 1px solid #ED4502;
-}
-
-.toolbox__group-subheading {
-    color: #C6EEFE;
-    text-align: center;
-    padding-bottom: 2rem;
-    font-size: 1.6rem;
-}
-
-.toolbox__icon-box {
-    text-align: center;
+.skills__box {
+    width: 30%;
+    height: 30rem;
     background-color: #C6EEFE;
-    height: 20rem;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 2px solid #ED4502;
     box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    position: relative;
 }
 
-.toolbox__icon-box--left {
-    transform: skewX(-14deg);
+.icon-box {
+    margin: 0 auto;
+    text-align: center;
+    width: 9rem;
+    height: 9rem;
+    background-color: #ED4502;
+    position: absolute;
+    top: -15%;
+    left: 40%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.toolbox__icon-box--right {
-    transform: skewX(14deg);
+.skills__icon {
+    font-size: 5rem;
+    color: #C6EEFE;
 }
 
-.toolbox__group-icons {
-    display: grid;
-    grid-template-columns: 6rem 6rem 6rem 6rem;
-    grid-template-rows: 6rem 6rem;
-    gap: 3rem;
-    justify-content: space-around;
-    padding-top: 2rem;
-}
-
-.skew-left {
-    transform: skewX(14deg);
-}
-
-.skew-right {
-    transform: skewX(-14deg);
-}
-
-.toolbox__logo {
-    width: 4rem;
-    height: 4rem;
-}
-
-.toolbox__logo-text {
-    font-size: 1.4rem;
-    font-weight: 500;
+.skills__text {
+    font-size: 2.2rem;
+    font-weight: 600;
     text-decoration: underline 1px solid #ED4502;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.skills__list-box {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    line-height: 1.6;
+}
+
+.skills__list {
+    list-style: none;
+}
+
+.list-icon {
+    padding-right: 1rem;
+    color: #ED4502;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SKILLS SECTION COLUMN BORDER                                              */
+/* ------------------------------------------------------------------------- */
+
+.skills__column-border {
+    height: 25rem;
+    width: 0.2rem;
+    align-self: center;
+    background: #02aaec1e;
+    box-shadow: 0rem 0rem 0.9rem rgba(2, 171, 236, 0.2);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SKILLS SECTION OTHER SKILLS                                               */
+/* ------------------------------------------------------------------------- */
+
+.skills__other-box {
+    color: #C6EEFE;
+    font-size: 1.8rem;
+    padding-top: 6rem;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.other-list {
+    padding-top: 1rem;
+    list-style: none;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -172,83 +143,43 @@
 /* ANIMATIONS FOR SKILLS SECTION                                             */
 /* ------------------------------------------------------------------------- */
 
-#skills__icon--1,
-#skills__icon--2,
-#skills__icon--3 {
+#skills__header,
+#skills__main-text,
+#skills__list--1,
+#skills__list--2,
+#skills__other-list {
     opacity: 0;
-    transform: scale(0.3);
 }
 
-#toolbox__center-border {
+#skills__column-border {
     opacity: 0;
     height: 0;
 }
 
-#skills__header,
-#skills__header-text--1,
-#skills__header-text--2,
-#skills__header-text--3,
-#toolbox__heading,
-#toolbox__group--1,
-#toolbox__group--2,
-#toolbox__group--3,
-#toolbox__group--4,
-#section__bottom-link--skills {
-    opacity: 0;
+.move-in-down__header {
+    animation: moveInDown 0.8s forwards;
 }
 
-.move-in-down__header,
-.move-in-down__toolbox-heading { 
-    animation: moveInDown 0.8s forwards; 
-}
-
-.scale-up__skills-icon--1,
-.scale-up__skills-icon--2,
-.scale-up__skills-icon--3 {
-    animation: scale 0.7s forwards;
-}
-
-.fade-in__skills-text--1,
-.fade-in__skills-text--2,
-.fade-in__skills-text--3 {
-    animation: fadeIn 0.7s forwards;
-}
-
-.move-in-left__toolbox-group--1,
-.move-in-left__toolbox-group--2 {
+.move-in-left__main-text,
+.move-in-left__list--1 {
     animation: moveInLeft 0.7s forwards;
 }
 
-.move-in-right__toolbox-group--1,
-.move-in-right__toolbox-group--2 {
+.move-in-right__list--2,
+.move-in-right__other-list {
     animation: moveInRight 0.7s forwards;
 }
 
-.scale-up__skills-icon--1 { animation-delay: 0.5s; }
-.fade-in__skills-text--1 { animation-delay: 0.6s; }
+.move-in-left__main-text { animation-delay: 0.5s; }
 
-.scale-up__skills-icon--2 { animation-delay: 0.9s; }
-.fade-in__skills-text--2 { animation-delay: 1.0s; }
+.move-in-left__list--1 { animation-delay: 0.8s; }
+.move-in-right__list--2 { animation-delay: 1.0s; }
 
-.scale-up__skills-icon--3 { animation-delay: 1.3s; }
-.fade-in__skills-text--3 { animation-delay: 1.4s; }
-
-.move-in-down__toolbox-heading { animation-delay: 1.7s; }
-
-.move-in-left__toolbox-group--1 { animation-delay: 2.0s; }
-.move-in-right__toolbox-group--1 { animation-delay: 2.4s; }
-
-.move-in-left__toolbox-group--2 { animation-delay: 2.8s; }
-.move-in-right__toolbox-group--2 { animation-delay: 3.2s; }
-
-.grow-out-length__toolbox-border { 
-    animation: growHeight 0.7s forwards;
-    animation-delay: 3.3s;
+.grow-out-height__column-border {
+    animation: growHeightSkills 0.7s forwards;
+    animation-delay: 1.2s;
 }
 
-.move-in-up__bottom-link--skills {
-    animation: moveInUp 0.7s forwards;
-    animation-delay: 3.5s;
-}
+.move-in-right__other-list { animation-delay: 1.4s; }
 
 /* ------------------------------------------------------------------------- */

@@ -76,28 +76,6 @@
 
     /***********************************************************************/
 
-    .toolbox__grid {
-        grid-template-columns:  40% 0.2rem 40%;
-    }
-
-    .toolbox__icon-box--left {
-        transform: skewX(0);
-    }
-    
-    .toolbox__icon-box--right {
-        transform: skewX(0);
-    }
-
-    .skew-left {
-        transform: skewX(0);
-    }
-    
-    .skew-right {
-        transform: skewX(0);
-    }
-
-    /***********************************************************************/
-
     .overlay img {
         height: 75%;
         width: 80%;
@@ -121,12 +99,6 @@
     .header__games-link:focus-visible > .header__ribbon::after {
         top: -5%;
         right: -7.5%;
-    }
-
-    /***********************************************************************/
-
-    .toolbox__grid {
-        grid-template-columns:  45% 0.2rem 45%;
     }
 
     /***********************************************************************/
@@ -283,6 +255,12 @@
 
     /***********************************************************************/
 
+    .skills__box {
+        width: 40%;
+    }
+
+    /***********************************************************************/
+
     .composition__photo {
         height: 14vh;
     }
@@ -347,32 +325,6 @@
         width: 95%;
     }
 
-    /***********************************************************************/
-    
-    .skills__header-text-box {
-        width: 65%;
-    }
-
-    .toolbox__center-border {
-        display: none;
-    }
-
-    .toolbox__grid {
-        grid-template-columns:  1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        width: 80%;
-        margin: 0 auto;
-        row-gap: 6rem;
-    }
-
-    .toolbox__group-heading {
-        text-align: left;
-    }
-    
-    .toolbox__group-subheading {
-        text-align: left;
-    }
-
     /***********************************************************************/ 
 
     .projects__grid {
@@ -415,16 +367,6 @@
     .header__title-box {
         top: 50%;
         left: 35%;
-    }
-
-    /***********************************************************************/
-
-    .skills__header-box {
-        width: 90%;
-    }
-
-    .skills__header-text-box {
-        width: 75%;
     }
 
     /***********************************************************************/
@@ -568,6 +510,16 @@
     .move-in-left__social--linkedin { animation-delay: 2.6s; }
 
     .move-in-up__bottom-link--about { animation-delay: 2.8s; }
+
+    /***********************************************************************/
+
+    .skills__skill-boxes {
+        width: 90%;
+    }
+
+    .skills__box {
+        width: 45%;
+    }
 
     /***********************************************************************/
 
@@ -735,9 +687,38 @@
     .about__photo-box {
         gap: 5rem;
     }
-}
-/***********************************************************************************************/
 
+    /***********************************************************************/
+
+    .skills__main-text-box {
+        width: 90%;
+    }
+    
+    .skills__skill-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8rem;
+    }
+    
+    .skills__box {
+        width: 60%;
+    }
+    
+    .skills__column-border {
+        height: 0.2rem;
+        width: 25rem;
+        margin-bottom: 2rem;
+        display: none;
+    }
+    
+    .skills__other-box {
+        width: 70%;
+    }
+}
+
+/***********************************************************************************************/
 
 /***********************************************************************************************/
 /* BELOW 445px */
@@ -820,6 +801,12 @@
 
     .about__grid {
         grid-template-rows: 1fr 0.2fr;
+    }
+
+    /***********************************************************************/
+
+    .skills__box {
+        width: 80%;
     }
 
     /***********************************************************************/

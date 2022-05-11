@@ -385,21 +385,14 @@ projectGridObserver.observe(projectGrid);
 const skillsGrid = document.getElementById('skills');
 const skillsHeader = document.getElementById('skills__header');
 
-const skillsIcon1 = document.getElementById('skills__icon--1');
-const skillsIcon2 = document.getElementById('skills__icon--2');
-const skillsIcon3 = document.getElementById('skills__icon--3');
+const skillsMainText = document.getElementById('skills__main-text');
 
-const skillsHeaderText1 = document.getElementById('skills__header-text--1');
-const skillsHeaderText2 = document.getElementById('skills__header-text--2');
-const skillsHeaderText3 = document.getElementById('skills__header-text--3');
+const skillsList1 = document.getElementById('skills__list--1');
+const skillsList2 = document.getElementById('skills__list--2');
 
-const toolboxHeading = document.getElementById('toolbox__heading');
-const toolboxCenterBorder = document.getElementById('toolbox__center-border');
+const skillsColumnBorder = document.getElementById('skills__column-border');
 
-const toolboxGroup1 = document.getElementById('toolbox__group--1');
-const toolboxGroup2 = document.getElementById('toolbox__group--2');
-const toolboxGroup3 = document.getElementById('toolbox__group--3');
-const toolboxGroup4 = document.getElementById('toolbox__group--4');
+const skillsOtherList = document.getElementById('skills__other-list');
 
 const skillsBottomLink = document.getElementById('section__bottom-link--skills');
 
@@ -409,22 +402,15 @@ const skillsGridObserver = new IntersectionObserver(
   
       if (entry.isIntersecting) {
         skillsHeader.classList.add('move-in-down__header');
+      
+        skillsMainText.classList.add('move-in-left__main-text');
 
-        skillsIcon1.classList.add('scale-up__skills-icon--1');
-        skillsIcon2.classList.add('scale-up__skills-icon--2');
-        skillsIcon3.classList.add('scale-up__skills-icon--3');
+        skillsList1.classList.add('move-in-left__list--1');
+        skillsList2.classList.add('move-in-right__list--2');
 
-        skillsHeaderText1.classList.add('fade-in__skills-text--1');
-        skillsHeaderText2.classList.add('fade-in__skills-text--2');
-        skillsHeaderText3.classList.add('fade-in__skills-text--3');
+        skillsColumnBorder.classList.add('grow-out-height__column-border');
 
-        toolboxHeading.classList.add('move-in-down__toolbox-heading');
-        toolboxCenterBorder.classList.add('grow-out-length__toolbox-border');
-
-        toolboxGroup1.classList.add('move-in-left__toolbox-group--1');
-        toolboxGroup2.classList.add('move-in-right__toolbox-group--1');
-        toolboxGroup3.classList.add('move-in-left__toolbox-group--2');
-        toolboxGroup4.classList.add('move-in-right__toolbox-group--2');
+        skillsOtherList.classList.add('move-in-right__other-list');
 
         skillsBottomLink.classList.add('move-in-up__bottom-link--skills');
       }
