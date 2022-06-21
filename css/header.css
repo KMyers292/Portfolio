@@ -62,8 +62,8 @@
     color: #FFF1EC;
     cursor: pointer;
     transition: all 0.3s;
-    animation: fadeIn 3s forwards;
-    animation-delay: 3s;
+    animation: fadeIn 2.5s forwards;
+    animation-delay: 2.2s;
     opacity: 0;
 }
 
@@ -101,7 +101,7 @@
     transition: all 0.3s, visibility 2s;
     color: #000C11;
     animation: fadeIn 2s forwards;
-    animation-delay: 3s;
+    animation-delay: 2.2s;
     opacity: 0;
 }
 
@@ -179,7 +179,7 @@
     height: 10rem;
     background: #ED4502;
     box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
-    animation: headerIntroBlock--primary 1.2s cubic-bezier(.7, .05, .5, .9) forwards;
+    animation: headerIntroBlock--primary 0.9s cubic-bezier(.7, .05, .5, .9) forwards;
 }
 
 .header__text {
@@ -191,7 +191,7 @@
 .header__text--primary {
     color: #ECF9FF;
     font-size: 10rem;
-    animation-delay: 1s;
+    animation-delay: 0.7s;
 }
 
 .header__title--secondary {
@@ -203,14 +203,14 @@
     height: 3.5rem;
     background: #02ABEC;
     box-shadow: 0rem 0rem 1.4rem rgba(2, 171, 236, 0.4);
-    animation: headerIntroBlock--secondary 1.2s cubic-bezier(.7, .05, .5, .9) forwards;
-    animation-delay: 1.2s;
+    animation: headerIntroBlock--secondary 0.9s cubic-bezier(.7, .05, .5, .9) forwards;
+    animation-delay: 0.9s;
 }
 
 .header__text--secondary {
     font-size: 3.5rem;
     font-weight: 400;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -232,7 +232,7 @@
     box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
     transition: all 0.3s;
     animation: headerButtonFadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
-    animation-delay: 2.3s;
+    animation-delay: 1.6s;
     opacity: 0;
 }
 
@@ -334,7 +334,7 @@
     color: #ECF9FF;
     transition: all 0.3s;
     animation: fadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
-    animation-delay: 2.7s;
+    animation-delay: 2.2s;
     opacity: 0;
 }
 
@@ -348,7 +348,7 @@
     transition: all 0.3s;
     color: #ECF9FF;
     animation: fadeIn 1s cubic-bezier(0.65, 0, .075, 1) forwards;
-    animation-delay: 2.7s;
+    animation-delay: 2.2s;
     opacity: 0;
 }
 
@@ -381,7 +381,7 @@
     color: #FFF1EC;
     transition: all 0.3s;
     animation: moveInRight 0.6s forwards;
-    animation-delay: 3s;
+    animation-delay: 2.2s;
     opacity: 0;
 }
 

@@ -170,16 +170,16 @@
     animation: moveInRight 0.7s forwards;
 }
 
-.move-in-left__main-text { animation-delay: 0.5s; }
+.move-in-left__main-text { animation-delay: 0.3s; }
 
-.move-in-left__list--1 { animation-delay: 0.8s; }
-.move-in-right__list--2 { animation-delay: 1.0s; }
+.move-in-left__list--1 { animation-delay: 0.3s; }
+.move-in-right__list--2 { animation-delay: 0.3s; }
 
 .grow-out-height__column-border {
     animation: growHeightSkills 0.7s forwards;
-    animation-delay: 1.2s;
+    animation-delay: 0.8s;
 }
 
-.move-in-right__other-list { animation-delay: 1.4s; }
+.move-in-right__other-list { animation-delay: 0.3s; }
 
 /* ------------------------------------------------------------------------- */
