@@ -33,153 +33,37 @@
 /* ------------------------------------------------------------------------- */
 
 .skills__skill-boxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 6rem;
     width: 80%;
     margin: 0 auto;
-    padding-top: 12rem;
-}
-
-.skills__box {
-    width: 30%;
-    height: 30rem;
-    background-color: #C6EEFE;
-    border-radius: 3px;
-    border: 2px solid #ED4502;
-    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
-    position: relative;
-}
-
-.icon-box {
-    margin: 0 auto;
-    text-align: center;
-    width: 9rem;
-    height: 9rem;
-    background-color: #ED4502;
-    position: absolute;
-    top: -15%;
-    left: 40%;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.skills__icon {
-    font-size: 5rem;
-    color: #C6EEFE;
-}
-
-.skills__text {
-    font-size: 2.2rem;
-    font-weight: 600;
-    text-decoration: underline 1px solid #ED4502;
-    text-align: center;
-    margin-top: 6rem;
-}
-
-.skills__list-box {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-left: 6rem;
-    line-height: 1.6;
-}
-
-.skills__list {
-    list-style: none;
-}
-
-.list-icon {
-    padding-right: 1rem;
-    color: #ED4502;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-/* ------------------------------------------------------------------------- */
-
-
-
-/* ------------------------------------------------------------------------- */
-/* SKILLS SECTION COLUMN BORDER                                              */
-/* ------------------------------------------------------------------------- */
-
-.skills__column-border {
-    height: 25rem;
-    width: 0.2rem;
-    align-self: center;
-    background: #02aaec1e;
-    box-shadow: 0rem 0rem 0.9rem rgba(2, 171, 236, 0.2);
-}
-
-/* ------------------------------------------------------------------------- */
-
-
-
-/* ------------------------------------------------------------------------- */
-/* SKILLS SECTION OTHER SKILLS                                               */
-/* ------------------------------------------------------------------------- */
-
-.skills__other-box {
-    color: #C6EEFE;
-    font-size: 1.8rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    background-color: #000C11;
+    padding: 4rem;
     padding-top: 6rem;
-    width: 30%;
-    margin: 0 auto;
+    padding-bottom: 6rem;
+    border-radius: 10px;
+}
+
+.skill__box {
+    background-color: #ECF9FF;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 1.4rem rgba(237, 69, 2, 0.4);
+    transition: all 0.2s;
+}
+
+.skill__box:hover {
+    box-shadow: 0rem 0rem 2rem rgba(237, 69, 2, 0.6);
+    transform: translateY(-.1rem);
+}
+
+.skill__text {
     text-align: center;
 }
-
-.other-list {
-    padding-top: 1rem;
-    list-style: none;
-}
-
-/* ------------------------------------------------------------------------- */
-
-
-
-/* ------------------------------------------------------------------------- */
-/* ANIMATIONS FOR SKILLS SECTION                                             */
-/* ------------------------------------------------------------------------- */
-
-#skills__header,
-#skills__main-text,
-#skills__list--1,
-#skills__list--2,
-#skills__other-list {
-    opacity: 0;
-}
-
-#skills__column-border {
-    opacity: 0;
-    height: 0;
-}
-
-.move-in-down__header {
-    animation: moveInDown 0.8s forwards;
-}
-
-.move-in-left__main-text,
-.move-in-left__list--1 {
-    animation: moveInLeft 0.7s forwards;
-}
-
-.move-in-right__list--2,
-.move-in-right__other-list {
-    animation: moveInRight 0.7s forwards;
-}
-
-.move-in-left__main-text { animation-delay: 0.3s; }
-
-.move-in-left__list--1 { animation-delay: 0.3s; }
-.move-in-right__list--2 { animation-delay: 0.3s; }
-
-.grow-out-height__column-border {
-    animation: growHeightSkills 0.7s forwards;
-    animation-delay: 0.8s;
-}
-
-.move-in-right__other-list { animation-delay: 0.3s; }
 
 /* ------------------------------------------------------------------------- */
