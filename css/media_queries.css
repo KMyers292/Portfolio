@@ -15,6 +15,14 @@
         right: -5.5%;
     }
 
+    .section__contact {
+        margin-top: -12.5vh;
+    }
+
+    .footer {
+        margin-top: -6.5vh;
+    }
+
     .board__square {
         width: 6rem;
         height: 6rem;
@@ -139,7 +147,7 @@
     .header__ribbon::after {
         padding-top: 11rem;
         font-size: 1.8rem;
-        top: -2.5%;
+        top: -2.7%;
         right: -7.5%;
     }
 
@@ -154,7 +162,7 @@
     .header__ribbon:hover::after,
     .header__games-link:focus-visible > .header__ribbon::after {
         padding-top: 11rem;
-        top: -2.5%;
+        top: -2.7%;
         right: -7.5%;
         font-size: 1.8rem;
     }
@@ -442,9 +450,21 @@
 /* 600 / 16 = 37.5 */
 @media (max-width: 38em) {
 
+    .header__video-controls-icon {
+        animation: none;
+        animation-delay: 0s;
+        opacity: 1;
+    }
+
     .header__ribbon::after {
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        animation: none;
+        animation-delay: 0s;
+    }
+
+    .header__ribbon-icon {
+        visibility: visible;
+        opacity: 1;
     }
 
     .header__title-box {
@@ -454,6 +474,35 @@
         padding-left: 10rem;
     }
 
+    .header__intro-block--primary {
+        animation: none;
+    }
+
+    .header__intro-block--secondary {
+        animation: none;
+    }
+
+    .header__text {
+        animation: none;
+        opacity: 1;
+    }
+
+    .header__btn-block {
+        width: 20rem;
+        animation: none;
+        opacity: 1;
+    }
+
+    .header__btn-text {
+        animation: none;
+        opacity: 1;
+    }
+
+    .header__btn-icon {
+        animation: none;
+        opacity: 1;
+    }
+
     .header__social-btn-box {
         position: absolute;
         right: 35%;
@@ -461,6 +510,11 @@
         display: flex;
         flex-direction: row;
         gap: 3rem;
+    }
+
+    .header__social-btn {
+        animation: none;
+        opacity: 1;
     }
 
     /***********************************************************************/
